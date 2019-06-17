@@ -1,7 +1,10 @@
 package com.ifpb.visao;
 
+import com.ifpb.Enumeration.CacheResult;
 import com.ifpb.modelo.Publicacao;
 import com.ifpb.modelo.dao.PublicacaoDAO;
+import com.ifpb.modelo.dao.PublicacaoDaoRedis;
+
 import java.sql.SQLException;
 import java.time.LocalDate;
 
@@ -16,7 +19,7 @@ public class App {
 
 
         PublicacaoDAO dao = new PublicacaoDAO();
-
+        PublicacaoDaoRedis daoRedis = new PublicacaoDaoRedis();
 
         dao.salvar(pub2);
 
