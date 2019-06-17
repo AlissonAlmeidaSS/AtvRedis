@@ -1,6 +1,5 @@
 package com.ifpb.visao;
 
-import com.ifpb.Enumeration.CacheResult;
 import com.ifpb.modelo.Publicacao;
 import com.ifpb.modelo.dao.PublicacaoDAO;
 import com.ifpb.modelo.dao.PublicacaoDaoRedis;
@@ -22,7 +21,11 @@ public class App {
         PublicacaoDaoRedis daoRedis = new PublicacaoDaoRedis();
 
         dao.salvar(pub2);
+        daoRedis.buscar(3);
+        dao.retorno(pub2.getId());
 
+
+        daoRedis.salvar(pub2);
 
         System.out.println(pub2);
 
